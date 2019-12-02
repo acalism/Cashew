@@ -24,7 +24,7 @@ class CashewBundleEx: Bundle
 
 public extension Bundle
 {
-    static func changeMainBundleType()
+    private static func changeMainBundleType()
     {
         object_setClass(Bundle.main, CashewBundleEx.self)
     }
@@ -58,7 +58,7 @@ public extension Bundle
         }
     }
 
-    static func checkLanguage(_ lang: String?)
+    private static func checkLanguage(_ lang: String?)
     {
         let ud = UserDefaults.standard
         if let oldLang = Bundle.cashew_language {
